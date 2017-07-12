@@ -1,23 +1,17 @@
 # Android编译源代码，烧录到Hikey960开发板
 
-##编译环境
-
-Android Sdk 25(Nougat 7.1.1)
-Ubuntu 16.04
-------------------------
-##参考资料
------------------------
-Google官方资料（中英文版有差距，最好是英文版）:https://source.android.com/source/
-
-Alpha Star极客社区（诚迈科技）:https://bbs.alpha-star.org/%E8%BD%AF%E4%BB%B6%E4%BA%A4%E6%B5%81/hikey960-%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%EF%BC%8C%E7%BC%96%E8%AF%91%E4%B8%8E%E7%83%A7%E5%BD%95
-----------------------------
-##步骤
-
-一、先翻墙！
+## 编译环境
+* Android Sdk **25(Nougat 7.1.1)**
+* Ubuntu **16.04**
+## 参考资料
+* Google官方资料（中英文版有差距，最好是英文版）:[Google](https://source.android.com/source/)
+* Alpha Star极客社区（诚迈科技）:[诚迈科技](https://bbs.alpha-star.org/%E8%BD%AF%E4%BB%B6%E4%BA%A4%E6%B5%81/hikey960-%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD%EF%BC%8C%E7%BC%96%E8%AF%91%E4%B8%8E%E7%83%A7%E5%BD%95)
+## 步骤
+一. 先翻墙！
 
       我用的是shadowsocks-QT5
 
-二、准备编译环境
+二. 准备编译环境
 
 1、jdk：根据google官方文档说明，如果Ubuntu>=15.04使用jdk8
 
@@ -51,7 +45,7 @@ sudo udevadm control --reload-rules
 
 export OUT_DIR_COMMON_BASE=路径名
 
-三、下载源代码
+三. 下载源代码
 
 安装repo
 
@@ -81,7 +75,7 @@ repo init -u https://android.googlesource.com/platform/manifest -master
 
 repo sync
 
-四、下载hikey960专有二进制文件
+四. 下载hikey960专有二进制文件
 
 wget https://dl.google.com/dl/android/aosp/arm-hikey960-NOU-7ad3cccc.tgz
 
@@ -95,7 +89,7 @@ tar xzf hisilicon-hikey960-NOU-5db76395.tgz
 
 $ ./extract-hisilicon-hikey960.sh
 
-五、编译hikey960源代码（耗时）
+五. 编译hikey960源代码（耗时）
 
 . ./build/envsetup.sh
 
@@ -103,7 +97,7 @@ lunch hikey960-userdebug
 
 make -j32
 
-六、烧录到开发板
+六. 烧录到开发板
 
 1.设置拨码开关1/3为ON,使HiKey960进入fastboot mode；
 
