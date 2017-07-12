@@ -1,4 +1,4 @@
-# Android编译源代码，烧录到Hikey960开发板
+# 编译Android源码，烧录到Hikey960开发板
 ## 编译环境
 * Android Sdk **25(Nougat 7.1.1)**
 * Ubuntu **16.04**
