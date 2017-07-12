@@ -11,16 +11,16 @@
 2. 准备编译环境
 * jdk：根据google官方文档说明，如果Ubuntu>=15.04使用jdk8
 
-     sudo apt-get install openjdk-8-jdk
+          sudo apt-get install openjdk-8-jdk
 * 安装所需程序包： 
 
-     sudo apt-get install git-core gnupg flex bison gperf build-essential \
+          sudo apt-get install git-core gnupg flex bison gperf build-essential \
 
-     zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
+          zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
 
-     lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \
+          lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache \
  
-     libgl1-mesa-dev libxml2-utils xsltproc unzip 
+          libgl1-mesa-dev libxml2-utils xsltproc unzip 
 
 * 配置USB使用权限（可放在烧录到开发板时在执行）
 
@@ -38,7 +38,7 @@
 
 * 使用单独的输出目录（所有编译的输出都会在源代码目录下的/out文件夹内，这部可以选择性设置）
 
-     export OUT_DIR_COMMON_BASE=路径名
+          export OUT_DIR_COMMON_BASE=路径名
 
 3. 下载源代码
 
@@ -104,4 +104,4 @@
 
                ./flash-all.sh
 
-     4.设置拨码开关3为OFF后，HiKey960重新供电 。
+     4. 设置拨码开关3为OFF后，HiKey960重新供电 。
