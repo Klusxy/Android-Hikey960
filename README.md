@@ -9,10 +9,10 @@
 1. 先翻墙！
 * 我用的是shadowsocks-QT5
 2. 准备编译环境
-* 1、jdk：根据google官方文档说明，如果Ubuntu>=15.04使用jdk8
+* jdk：根据google官方文档说明，如果Ubuntu>=15.04使用jdk8
 
      sudo apt-get install openjdk-8-jdk
-* 2、安装所需程序包： 
+* 安装所需程序包： 
 
      sudo apt-get install git-core gnupg flex bison gperf build-essential \
 
@@ -22,7 +22,7 @@
  
      libgl1-mesa-dev libxml2-utils xsltproc unzip 
 
-* 3、配置USB使用权限（可放在烧录到开发板时在执行）
+* 配置USB使用权限（可放在烧录到开发板时在执行）
 
 注：我在使用google文档上给出的命令时，下载不下来，所以采用的以下方法
 
@@ -36,7 +36,7 @@
 
      5. sudo udevadm control --reload-rules
 
-* 4、使用单独的输出目录（所有编译的输出都会在源代码目录下的/out文件夹内，这部可以选择性设置）
+* 使用单独的输出目录（所有编译的输出都会在源代码目录下的/out文件夹内，这部可以选择性设置）
 
      export OUT_DIR_COMMON_BASE=路径名
 
@@ -44,53 +44,53 @@
 
      1. 安装repo
 
-     mkdir ~/bin
+               mkdir ~/bin
 
-     PATH=~/bin:$PATH
+               PATH=~/bin:$PATH
 
-     curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+               curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 
-     chmod a+x ~/bin/repo
+               chmod a+x ~/bin/repo
 
      2. 初始化Repo
 
-     mkdir WORKING_DIRECTORY（名自取）
+               mkdir WORKING_DIRECTORY（名自取）
 
-     cd WORKING_DIRECTORY
+               cd WORKING_DIRECTORY
 
-     git config --global user.name "Your Name"
+               git config --global user.name "Your Name"
 
-     git config --global user.email "you@example.com"
+               git config --global user.email "you@example.com"
 
      3. 开始下载源代码（耗时）
 
-     repo init -u https://android.googlesource.com/platform/manifest
+               repo init -u https://android.googlesource.com/platform/manifest
 
-     repo init -u https://android.googlesource.com/platform/manifest -master
+               repo init -u https://android.googlesource.com/platform/manifest -master
 
-     repo sync
+               repo sync
 
 4. 下载hikey960专有二进制文件
 
-     wget https://dl.google.com/dl/android/aosp/arm-hikey960-NOU-7ad3cccc.tgz
+          wget https://dl.google.com/dl/android/aosp/arm-hikey960-NOU-7ad3cccc.tgz
 
-     tar xzf arm-hikey960-NOU-6eafa750.tgz
+          tar xzf arm-hikey960-NOU-6eafa750.tgz
 
-     ./extract-arm-hikey960.sh
+          ./extract-arm-hikey960.sh
 
-     wget https://dl.google.com/dl/android/aosp/hisilicon-hikey960-NOU-5db76395.tgz
+          wget https://dl.google.com/dl/android/aosp/hisilicon-hikey960-NOU-5db76395.tgz
 
-     tar xzf hisilicon-hikey960-NOU-5db76395.tgz
+          tar xzf hisilicon-hikey960-NOU-5db76395.tgz
 
-     $ ./extract-hisilicon-hikey960.sh
+          $ ./extract-hisilicon-hikey960.sh
 
 5. 编译hikey960源代码（耗时）
 
-     . ./build/envsetup.sh
+          . ./build/envsetup.sh
 
-     lunch hikey960-userdebug
+          lunch hikey960-userdebug
 
-     make -j32
+          make -j32
 
 6. 烧录到开发板
 
@@ -100,8 +100,8 @@
 
      3. 烧录android初始镜像:
 
-     cd device/linaro/hikey/installer/hikey960
+               cd device/linaro/hikey/installer/hikey960
 
-     ./flash-all.sh
+               ./flash-all.sh
 
      4.设置拨码开关3为OFF后，HiKey960重新供电 。
