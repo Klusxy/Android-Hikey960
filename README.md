@@ -22,9 +22,7 @@
  
           libgl1-mesa-dev libxml2-utils xsltproc unzip 
 
-* 配置USB使用权限（可放在烧录到开发板时在执行）
-
-注：我在使用google文档上给出的命令时，下载不下来，所以采用的以下方法
+* 配置USB使用权限（可放在烧录到开发板时在执行）*注：我在使用google文档上给出的命令时，下载不下来，所以采用的以下方法*
 
      1. 直接打开浏览器下载：http://source.android.com/source/51-android.txt
 
